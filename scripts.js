@@ -30,3 +30,18 @@ sr.reveal('.services-container .box', { delay: 100, origin: 'top'})
 sr.reveal('.about-container', { delay: 100, origin: 'top'})
 sr.reveal('.reviews-container', { delay: 100, origin: 'top'})
 sr.reveal('.newsletter .box', { delay: 100, origin: 'bottom'})
+
+document.addEventListener("DOMContentLoaded", () => {
+  const scrollBtn = document.querySelector(".button");
+
+  if (scrollBtn) {
+    scrollBtn.addEventListener("click", (e) => {
+      e.preventDefault(); // Evita qualquer comportamento padrão
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  }
+});
+
