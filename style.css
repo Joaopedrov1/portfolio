@@ -105,11 +105,45 @@ header .ri-close-line {
   padding-right: 0;
 }
 
+.imagem {
+  position: relative;
+  display: inline-block;
+}
+
 .profile-imagem {
   width: 100%;
   max-width: 990px;
   transition: transform 2s ease-in-out;
   animation: flutuar 3s ease-in-out infinite;
+  z-index: 2;
+  position: relative;
+}
+
+.imagem::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 53%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 20px;
+  background: radial-gradient(
+    ellipse at center,
+    rgb(0, 0, 0) 0%,
+    transparent 90%
+  );
+  filter: blur(4px);
+  z-index: 1;
+}
+
+@keyframes flutuar {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 /* ---------------------------------------------------------------------------------------------------------------- */
