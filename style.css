@@ -96,13 +96,11 @@ header .ri-close-line {
 
 .home {
   display: grid;
-  /* Adicionado */
   grid-template-columns: repeat(2, 1fr);
   width: 100%;
   min-height: 100vh;
   position: relative;
   align-items: center;
-  /* Alinha os itens verticalmente */
   padding-left: 5%;
   padding-right: 0;
 }
@@ -130,7 +128,17 @@ header .ri-close-line {
   font-size: 1.5rem;
 }
 
-/* Ride */
+.angular {
+  font-size: 15px;
+}
+
+.udemy {
+  font-size: 26px;
+}
+
+em {
+  color: #5900ff;
+}
 
 .heading {
   text-align: center;
@@ -142,7 +150,7 @@ header .ri-close-line {
 }
 
 .heading h1 {
-  font-size: 2rem;
+  font-size: 45px;
 }
 
 .ride-container {
@@ -177,8 +185,6 @@ header .ri-close-line {
   font-weight: 500;
   margin: 1.1rem 0 0.5rem;
 }
-
-/* Services */
 
 .services-container {
   display: grid;
@@ -245,8 +251,6 @@ header .ri-close-line {
   background: #00848d;
 }
 
-/* About */
-
 .about-container {
   display: flex;
   justify-content: center;
@@ -280,8 +284,6 @@ header .ri-close-line {
 .about-text .btn:hover {
   background: #00848d;
 }
-
-/* Reviews */
 
 .reviews-container {
   display: grid;
@@ -327,8 +329,6 @@ header .ri-close-line {
   object-position: center;
   border: 2px solid purple;
 }
-
-/* Newsletter */
 
 .newsletter {
   background: linear-gradient(to top right, #afa9bb, #3700ff);
@@ -385,14 +385,13 @@ header .ri-close-line {
 }
 
 #home {
-  scroll-margin-top: 60px; /* ou o valor da altura da sua navbar */
+  scroll-margin-top: 60px;
 }
 
 .descricao {
   color: #eeeff1;
 }
 
-/* From Uiverse.io by R5Program */
 .button {
   height: 50px;
   width: 50px;
@@ -403,9 +402,9 @@ header .ri-close-line {
   border: 2px solid #e0e0e0;
   box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.2);
   display: flex;
-  position: fixed; /* <- Alterado de relative para fixed */
-  bottom: 20px; /* <- Distância da parte inferior */
-  right: 20px; /* <- Distância da lateral direita */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
   transition: all 0.5s;
   justify-content: center;
   align-items: center;
@@ -455,8 +454,6 @@ header .ri-close-line {
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
 }
-
-/* Responsive */
 
 @media (max-width: 1375px) {
   .text {
@@ -622,7 +619,6 @@ header .ri-close-line {
   }
 }
 
-/* Animação de flutuação lenta */
 @keyframes flutuar {
   0%,
   100% {
@@ -630,5 +626,13 @@ header .ri-close-line {
   }
   50% {
     transform: translateY(-20px);
+  }
+}
+
+@media (max-width: 600px) {
+  #scrollTopBtn {
+    transform: scale(0.7);
+    bottom: 20px;
+    right: 20px;
   }
 }
